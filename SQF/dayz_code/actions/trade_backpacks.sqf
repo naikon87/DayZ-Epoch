@@ -1,7 +1,7 @@
 private ["_part_out","_part_in","_qty_out","_qty_in","_qty","_bos","_bag","_class","_started","_finished","_animState","_isMedic","_num_removed","_needed","_activatingPlayer","_buy_o_sell","_textPartIn","_textPartOut","_traderID"];
 //		   [part_out,part_in, qty_out, qty_in,];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_8' , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_8' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 _activatingPlayer = _this select 1;
@@ -30,7 +30,7 @@ if(_buy_o_sell == "buy") then {
 
 if (_qty >= _qty_in) then {
 
-	cutText [localize 'STR_EPOCH_PLAYER_128', "PLAIN DOWN"];
+	cutText [localize 'str_epoch_player_128', "PLAIN DOWN"];
 	 
 	// force animation 
 	player playActionNow "Medic";
@@ -64,7 +64,7 @@ if (_qty >= _qty_in) then {
 			[objNull, player, rSwitchMove,""] call RE;
 			player playActionNow "stop";
 		};
-		cutText [localize 'STR_EPOCH_PLAYER_24' , "PLAIN DOWN"];
+		cutText [localize 'str_epoch_player_24' , "PLAIN DOWN"];
 	};
 
 	if (_finished) then {
@@ -112,13 +112,13 @@ if (_qty >= _qty_in) then {
 					};
 				};
 
-				cutText [format[(localize 'STR_EPOCH_PLAYER_137'),_qty_in,_textPartIn,_qty_out,_textPartOut], "PLAIN DOWN"];
+				cutText [format[(localize 'str_epoch_player_137'),_qty_in,_textPartIn,_qty_out,_textPartOut], "PLAIN DOWN"];
 
 				{player removeAction _x} forEach s_player_parts;s_player_parts = [];
 				s_player_parts_crtl = -1;
 	
 			} else {
-				cutText [format[(localize 'STR_EPOCH_PLAYER_132'),_textPartOut] , "PLAIN DOWN"];
+				cutText [format[(localize 'str_epoch_player_132'),_textPartOut] , "PLAIN DOWN"];
 			};
 			dayzTradeResult = nil;
 		};
@@ -126,7 +126,7 @@ if (_qty >= _qty_in) then {
 	
 } else {
 	_needed =  _qty_in - _qty;
-	cutText [format[(localize 'STR_EPOCH_PLAYER_133'),_needed,_textPartIn] , "PLAIN DOWN"];
+	cutText [format[(localize 'str_epoch_player_133'),_needed,_textPartIn] , "PLAIN DOWN"];
 };
 
 TradeInprogress = false;

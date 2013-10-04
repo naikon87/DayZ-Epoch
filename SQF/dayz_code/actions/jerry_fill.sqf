@@ -1,6 +1,6 @@
 private ["_qty","_started","_finished","_animState","_isMedic","_abort","_fillCounter","_dis","_sfx"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_30' , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_30' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 player removeAction s_player_fillfuel;
@@ -24,7 +24,7 @@ _qty = count _fuelCans;
 	
 	_fillCounter = _fillCounter + 1;
 
-	cutText [format[localize 'STR_EPOCH_PLAYER_31',_displayName], "PLAIN DOWN"];	
+	cutText [format[localize 'str_epoch_player_31',_displayName], "PLAIN DOWN"];	
 	
 	// force animation 
 	player playActionNow "Medic";
@@ -64,7 +64,7 @@ _qty = count _fuelCans;
 			[objNull, player, rSwitchMove,""] call RE;
 			player playActionNow "stop";
 		};
-		cutText [localize 'STR_EPOCH_PLAYER_24' , "PLAIN DOWN"];
+		cutText [localize 'str_epoch_player_24' , "PLAIN DOWN"];
 		_abort = true;
 	};
 
@@ -75,7 +75,7 @@ _qty = count _fuelCans;
 			} else {
 				player addMagazine "ItemJerrycan";
 			};
-			cutText [format[localize 'STR_EPOCH_PLAYER_32',_displayName], "PLAIN DOWN"];	
+			cutText [format[localize 'str_epoch_player_32',_displayName], "PLAIN DOWN"];	
 		} else {
 			_abort = true;
 		};

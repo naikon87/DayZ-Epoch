@@ -1,6 +1,6 @@
 private ["_trader_data", "_dialog"];
 
-if (TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_112' , "PLAIN DOWN"]; };
+if (TradeInprogress) exitWith { cutText [localize 'str_epoch_player_112' , "PLAIN DOWN"]; };
 
 _trader_data = (_this select 3);
 
@@ -19,4 +19,4 @@ TraderCatList = [];
 } forEach _trader_data;
 waitUntil { !dialog };
 TraderCurrentCatIndex = -1;
-TraderCatList = -1;
+TraderCatList = [];

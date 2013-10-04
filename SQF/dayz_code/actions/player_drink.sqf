@@ -6,7 +6,7 @@ call gear_ui_init;
 _onLadder =     (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 if (_onLadder) exitWith {cutText [(localize "str_player_21") , "PLAIN DOWN"]};
 
-if (vehicle player != player) exitWith {cutText [localize 'STR_EPOCH_PLAYER_69', "PLAIN DOWN"]};
+if (vehicle player != player) exitWith {cutText [localize 'str_epoch_player_69', "PLAIN DOWN"]};
 
 //Force players to wait 3 mins to drink again
 //if (dayz_lastDrink < 180) exitWith {cutText ["You may not drink, your not thirsty", "PLAIN DOWN"]};

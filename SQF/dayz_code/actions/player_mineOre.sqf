@@ -5,7 +5,7 @@
 */
 private ["_isOk","_i","_objName","_objInfo","_lenInfo","_started","_finished","_animState","_isMedic","_proceed","_counter","_itemOut","_countOut","_rock","_distance2d","_rockBox","_rocks","_findNearestRock"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_84' , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_84' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 // allowed rocks list move this later
@@ -97,7 +97,7 @@ if (count(_findNearestRock) >= 1) then {
 				_counter = _counter + 1;
 			};
 
-			cutText [format[localize 'STR_EPOCH_PLAYER_85', _counter,  _countOut], "PLAIN DOWN"];
+			cutText [format[localize 'str_epoch_player_85', _counter,  _countOut], "PLAIN DOWN"];
 
 			if(_counter == _countOut) exitWith {
 				_isOk = false;
@@ -122,7 +122,7 @@ if (count(_findNearestRock) >= 1) then {
 			};
 			diag_log format["DEBUG TREE DAMAGE: %1", _rock];
 			*/
-			cutText [format[localize 'STR_EPOCH_PLAYER_86', _countOut], "PLAIN DOWN"];
+			cutText [format[localize 'str_epoch_player_86', _countOut], "PLAIN DOWN"];
 
 		} else {
 			r_interrupt = false;
@@ -130,7 +130,7 @@ if (count(_findNearestRock) >= 1) then {
 				[objNull, player, rSwitchMove,""] call RE;
 				player playActionNow "stop";
 			};
-			cutText [localize 'STR_EPOCH_PLAYER_24', "PLAIN DOWN"];
+			cutText [localize 'str_epoch_player_24', "PLAIN DOWN"];
 		};
 
 	} else {

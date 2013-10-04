@@ -32,7 +32,7 @@ if((_script == "") or (_script == "\z\addons\dayz_code\compile\player_onPause.sq
 			};
 			case (!r_player_dead and !canbuild) : {
 				_btnAbort ctrlEnable false;
-				cutText [localize 'STR_EPOCH_PLAYER_7', "PLAIN DOWN"];
+				cutText [localize 'str_epoch_player_7', "PLAIN DOWN"];
 			};
 			case (!r_player_dead and player getVariable["combattimeout", 0] >= time) : {
 				_btnAbort ctrlEnable false;

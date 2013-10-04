@@ -58,8 +58,8 @@ if(_removed == _countIn) then {
 		_dog setVariable ["fsm_handle", _fsmid];
 		_dog setVariable ["CharacterID", dayz_characterID, true];
 
-		cutText [format[localize 'STR_EPOCH_PLAYER_119',_textRemoved], "PLAIN DOWN"];
+		cutText [format[localize 'str_epoch_player_119',_textRemoved], "PLAIN DOWN"];
 	} else {
-		cutText [format[localize 'STR_EPOCH_PLAYER_120',_textRemoved], "PLAIN DOWN"];
+		cutText [format[localize 'str_epoch_player_120',_textRemoved], "PLAIN DOWN"];
 	};
 };

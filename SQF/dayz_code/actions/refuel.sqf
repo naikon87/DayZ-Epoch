@@ -1,6 +1,6 @@
 private ["_vehicle","_curFuel","_newFuel","_started","_finished","_animState","_isMedic","_location1","_location2","_abort","_canName","_canSize","_configCan","_configVeh","_capacity","_nameText","_availableCans","_canText"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_19' , "PLAIN DOWN"] };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_19' , "PLAIN DOWN"] };
 TradeInprogress = true;
 
 // Use target from addaction
@@ -37,7 +37,7 @@ _availableCans = ["ItemJerrycan","ItemFuelBarrel"];
 
 			//diag_log ("refuel check: " + str(_newFuel) + " / " + str(_capacity));
 
-			cutText [format[localize 'STR_EPOCH_PLAYER_94',_canText], "PLAIN DOWN"];
+			cutText [format[localize 'str_epoch_player_94',_canText], "PLAIN DOWN"];
 			
 			// alert zombies
 			[player,20,true,(getPosATL player)] spawn player_alertZombies;
@@ -123,17 +123,17 @@ _availableCans = ["ItemJerrycan","ItemFuelBarrel"];
 					};	
 			
 				} else {
-					cutText [format[localize 'STR_EPOCH_PLAYER_95',_nameText], "PLAIN DOWN"];
+					cutText [format[localize 'str_epoch_player_95',_nameText], "PLAIN DOWN"];
 					_abort = true;
 				};
 					
 			} else {
-				cutText [localize 'STR_EPOCH_PLAYER_24' , "PLAIN DOWN"];
+				cutText [localize 'str_epoch_player_24' , "PLAIN DOWN"];
 				_abort = true;
 			};
 		
 		} else {
-			cutText [format[localize 'STR_EPOCH_PLAYER_95',_nameText], "PLAIN DOWN"];
+			cutText [format[localize 'str_epoch_player_95',_nameText], "PLAIN DOWN"];
 			_abort = true;
 		};			
 	};

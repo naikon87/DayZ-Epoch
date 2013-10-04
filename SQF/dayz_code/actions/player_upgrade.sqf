@@ -4,7 +4,7 @@
 */
 private ["_location","_dir","_classname","_missing","_text","_proceed","_num_removed","_object","_missingQty","_itemIn","_countIn","_qty","_removed","_removed_total","_tobe_removed_total","_objectID","_objectUID","_temp_removed_array","_textMissing","_newclassname","_requirements","_obj","_upgrade","_lockable","_combination_1","_combination_2","_combination_3","_combination","_objectCharacterID","_canBuildOnPlot","_friendlies","_nearestPole","_ownerID","_distance","_needText","_findNearestPoles","_findNearestPole","_IsNearPlot"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_47' , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_47' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 player removeAction s_player_upgrade_build;
@@ -51,7 +51,7 @@ if(_IsNearPlot == 0) then {
 };
 
 // exit if not allowed due to plot pole
-if(!_canBuildOnPlot) exitWith {  TradeInprogress = false; cutText [format[localize 'STR_EPOCH_PLAYER_87',_needText,_distance] , "PLAIN DOWN"]; };
+if(!_canBuildOnPlot) exitWith {  TradeInprogress = false; cutText [format[localize 'str_epoch_player_87',_needText,_distance] , "PLAIN DOWN"]; };
 
 // get cursortarget from addaction
 _obj = _this select 3;
@@ -62,7 +62,7 @@ _objectID 	= _obj getVariable ["ObjectID","0"];
 // Find objectUID
 _objectUID	= _obj getVariable ["ObjectUID","0"];
 
-if(_objectID == "0" && _objectUID == "0") exitWith {TradeInprogress = false; s_player_upgrade_build = -1; cutText [localize 'STR_EPOCH_PLAYER_48', "PLAIN DOWN"];};
+if(_objectID == "0" && _objectUID == "0") exitWith {TradeInprogress = false; s_player_upgrade_build = -1; cutText [localize 'str_epoch_player_48', "PLAIN DOWN"];};
 
 // Get classname
 _classname = typeOf _obj;
@@ -154,9 +154,9 @@ if ((count _upgrade) > 0) then {
 				
 				_objectCharacterID = _combination;
 				
-				cutText [format[localize 'STR_EPOCH_PLAYER_88',_combination,_text], "PLAIN DOWN", 5];
+				cutText [format[localize 'str_epoch_player_88',_combination,_text], "PLAIN DOWN", 5];
 			} else {	
-				cutText [format[localize 'STR_EPOCH_PLAYER_89',_text], "PLAIN DOWN", 5];
+				cutText [format[localize 'str_epoch_player_89',_text], "PLAIN DOWN", 5];
 			};
 
 			dayzSwapObj = [_objectCharacterID,_object,[_dir,_location],_classname,_obj,_objectID,_objectUID];
@@ -167,16 +167,16 @@ if ((count _upgrade) > 0) then {
 		} else {
 		
 			{player addMagazine _x;} forEach _temp_removed_array;
-			cutText [format[localize 'STR_EPOCH_PLAYER_50',_removed_total,_tobe_removed_total], "PLAIN DOWN"];
+			cutText [format[localize 'str_epoch_player_50',_removed_total,_tobe_removed_total], "PLAIN DOWN"];
 		
 		};
 	} else {
 		_textMissing = getText(configFile >> "CfgMagazines" >> _missing >> "displayName");
-		cutText [format[localize 'STR_EPOCH_PLAYER_51',_missingQty, _textMissing], "PLAIN DOWN"];
+		cutText [format[localize 'str_epoch_player_51',_missingQty, _textMissing], "PLAIN DOWN"];
 	};
 
 } else {
-	cutText [localize 'STR_EPOCH_PLAYER_90', "PLAIN DOWN"];
+	cutText [localize 'str_epoch_player_90', "PLAIN DOWN"];
 };
 
 TradeInprogress = false;

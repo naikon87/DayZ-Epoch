@@ -5,7 +5,7 @@
 private ["_tent","_location","_isOk","_cancel","_location3","_location4","_location1","_location2","_counter","_pondPos","_isPond","_ppos","_hastentitem","_dir","_building","_isBuilding","_playerPos","_item","_offset_x","_offset_y","_offset_z","_offset_z_attach","_config","_text","_tmpvault","_vault_location","_objectsPond","_combination_1","_combination_2","_combination_3","_combination_4","_combination","_removed"];
 //check if can pitch here
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_139' , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_139' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 //disableSerialization;
@@ -52,7 +52,7 @@ _counter = 0;
 while {_isOk} do {
 	
 	if(_counter == 0) then {
-		cutText [localize 'STR_EPOCH_PLAYER_140', "PLAIN DOWN"];
+		cutText [localize 'str_epoch_player_140', "PLAIN DOWN"];
 		sleep 5; 
 		_location1 = getPosATL player;
 		sleep 5;
@@ -60,7 +60,7 @@ while {_isOk} do {
 	
 		if(_location1 distance _location2 < 0.1) exitWith {
 			
-			cutText [localize 'STR_EPOCH_PLAYER_141', "PLAIN DOWN"];
+			cutText [localize 'str_epoch_player_141', "PLAIN DOWN"];
 			_location3 = getPosATL player;
 			sleep 5;
 			_location4 = getPosATL player;
@@ -163,15 +163,15 @@ if(!_cancel) then {
 			dayzPublishObj = [_combination,_tent,[_dir,_location],"VaultStorageLocked"];
 			publicVariableServer  "dayzPublishObj";
 	
-			cutText [format[localize 'STR_EPOCH_PLAYER_142',_combination], "PLAIN DOWN", 5];
+			cutText [format[localize 'str_epoch_player_142',_combination], "PLAIN DOWN", 5];
 		};
 	
 	} else {
-		cutText [localize 'STR_EPOCH_PLAYER_143', "PLAIN DOWN"];
+		cutText [localize 'str_epoch_player_143', "PLAIN DOWN"];
 	};
 
 } else {
-	cutText [localize 'STR_EPOCH_PLAYER_144', "PLAIN DOWN"];
+	cutText [localize 'str_epoch_player_144', "PLAIN DOWN"];
 };
 
 TradeInprogress = false;

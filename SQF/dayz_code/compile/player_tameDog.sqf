@@ -18,7 +18,7 @@ if ((_hasRawMeat) && (_hasdog == "false")) then {
 	_target removeAction _id;
     	player setvariable ["dogid", _fsmid];
 } else {
-	cutText [localize 'STR_EPOCH_PLAYER_154', "PLAIN DOWN"];
+	cutText [localize 'str_epoch_player_154', "PLAIN DOWN"];
 };
 
 //handle publicVariables here later.

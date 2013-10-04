@@ -1,6 +1,6 @@
 private ["_vehicle","_part","_hitpoint","_type","_selection","_array","_started","_finished","_animState","_isMedic","_isOK","_brokenPart","_findPercent","_damage","_hasToolbox","_nameType","_namePart"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_108' , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_108' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 //_id = _this select 2;
@@ -89,10 +89,10 @@ if (_hasToolbox) then {
 
 				if(_brokenPart) then {
 					//Failed!
-					cutText [format[localize 'STR_EPOCH_PLAYER_109',_namePart,_nameType], "PLAIN DOWN"];
+					cutText [format[localize 'str_epoch_player_109',_namePart,_nameType], "PLAIN DOWN"];
 				} else {
 					//Success!
-					cutText [format[localize 'STR_EPOCH_PLAYER_110',_namePart,_nameType], "PLAIN DOWN"];
+					cutText [format[localize 'str_epoch_player_110',_namePart,_nameType], "PLAIN DOWN"];
 				};
 
 			} else {
@@ -107,11 +107,11 @@ if (_hasToolbox) then {
 			[objNull, player, rSwitchMove,""] call RE;
 			player playActionNow "stop";
 		};
-		cutText [localize 'STR_EPOCH_PLAYER_24', "PLAIN DOWN"];
+		cutText [localize 'str_epoch_player_24', "PLAIN DOWN"];
 	};
 			
 } else {
-	cutText [format[localize 'STR_EPOCH_PLAYER_111',_namePart], "PLAIN DOWN"];
+	cutText [format[localize 'str_epoch_player_111',_namePart], "PLAIN DOWN"];
 };
 
 dayz_myCursorTarget = objNull;

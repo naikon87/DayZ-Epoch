@@ -1,6 +1,6 @@
 private ["_text","_rawmeat","_cookedmeat","_meat","_meatcooked","_qty","_started","_finished","_animState","_isMedic","_removed","_dis","_sfx"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_16' , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_16' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 // diag_log ("Cook Enabled");
@@ -22,7 +22,7 @@ _cookedmeat = meatcooked;
 		
 		_qty = {_x == _meat} count magazines player;
 
-		cutText [format[localize 'STR_EPOCH_PLAYER_17',_textraw], "PLAIN DOWN"];
+		cutText [format[localize 'str_epoch_player_17',_textraw], "PLAIN DOWN"];
 
 		player playActionNow "Medic";
 		
@@ -71,7 +71,7 @@ _cookedmeat = meatcooked;
 				player playActionNow "stop";
 			};
 
-			cutText [format[localize 'STR_EPOCH_PLAYER_18',_textraw], "PLAIN DOWN"];
+			cutText [format[localize 'str_epoch_player_18',_textraw], "PLAIN DOWN"];
 		};
 	};
 } forEach _rawmeat;

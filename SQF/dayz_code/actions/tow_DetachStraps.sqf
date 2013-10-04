@@ -1,6 +1,6 @@
 private ["_vehicle","_started","_finished","_animState","_isMedic","_configVeh","_nameText","_towTruck","_inTow"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_9' , "PLAIN DOWN"] };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_9' , "PLAIN DOWN"] };
 TradeInprogress = true;
 
 player removeAction s_player_towing;
@@ -67,7 +67,7 @@ if(_inTow) then {
 			detach _vehicle;
 			_towTruck setVariable ["DZEinTow", false, true];
 			_towTruck setVariable ["DZEvehicleInTow", objNull, true];
-			cutText [format[localize 'STR_EPOCH_PLAYER_124',_nameText], "PLAIN DOWN"];
+			cutText [format[localize 'str_epoch_player_124',_nameText], "PLAIN DOWN"];
 
 			_vehicle setvelocity [0,0,1];
 		};
@@ -76,7 +76,7 @@ if(_inTow) then {
 		_towTruck setVariable ["DZEvehicleInTow", objNull, true];	
 	};
 } else {
-	cutText [localize 'STR_EPOCH_PLAYER_125', "PLAIN DOWN"];
+	cutText [localize 'str_epoch_player_125', "PLAIN DOWN"];
 };
 TradeInprogress = false;
 s_player_towing = -1;

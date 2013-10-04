@@ -54,7 +54,7 @@ if(!isNull dayz_selectedDoor) then {
 			
 			if (isNil 'KeyCodeTryTimer') then {KeyCodeTryTimer = diag_tickTime+10;};
 			
-			cutText [localize 'STR_EPOCH_PLAYER_155', "PLAIN DOWN"];
+			cutText [localize 'str_epoch_player_155', "PLAIN DOWN"];
 			_display = findDisplay 41144;
 			_display closeDisplay 3000;
 		};

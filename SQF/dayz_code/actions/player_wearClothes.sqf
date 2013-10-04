@@ -4,7 +4,7 @@ Added Female skin changes - DayZ Epoch - vbawol
 */
 private ["_item","_onLadder","_hasclothesitem","_config","_text","_myModel","_itemNew","_currentSex","_newSex","_model"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_91' , "PLAIN DOWN"] };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_91' , "PLAIN DOWN"] };
 TradeInprogress = true;
 
 _item = _this;
@@ -19,7 +19,7 @@ _text = getText (_config >> _item >> "displayName");
 
 if (!_hasclothesitem) exitWith {TradeInprogress = false; cutText [format[(localize "str_player_31"),_text,"wear"] , "PLAIN DOWN"]};
 
-if (vehicle player != player) exitWith {TradeInprogress = false; cutText [localize 'STR_EPOCH_PLAYER_92', "PLAIN DOWN"]};
+if (vehicle player != player) exitWith {TradeInprogress = false; cutText [localize 'str_epoch_player_92', "PLAIN DOWN"]};
 
 _myModel = (typeOf player);
 _itemNew = "Skin_" + _myModel;
@@ -46,7 +46,7 @@ if ( (isClass(_config >> _itemNew)) ) then {
 			};
 
 		} else {
-			cutText [localize 'STR_EPOCH_PLAYER_93', "PLAIN DOWN"];
+			cutText [localize 'str_epoch_player_93', "PLAIN DOWN"];
 		};
 	};
 };

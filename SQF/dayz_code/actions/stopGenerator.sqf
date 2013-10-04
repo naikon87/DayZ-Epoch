@@ -1,6 +1,6 @@
 private ["_vehicle","_started","_finished","_animState","_isMedic","_soundObject"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_116' , "PLAIN DOWN"] };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_116' , "PLAIN DOWN"] };
 TradeInprogress = true;
 
 player removeAction s_player_fillgen;
@@ -18,7 +18,7 @@ r_doLoop = true;
 _started = false;
 _finished = false;
 
-cutText [localize 'STR_EPOCH_PLAYER_117', "PLAIN DOWN"];
+cutText [localize 'str_epoch_player_117', "PLAIN DOWN"];
 
 [player,50,true,(getPosATL player)] spawn player_alertZombies;
 
@@ -45,7 +45,7 @@ if(!_finished) then {
 		[objNull, player, rSwitchMove,""] call RE;
 		player playActionNow "stop";
 	};
-	cutText [localize 'STR_EPOCH_PLAYER_24' , "PLAIN DOWN"]
+	cutText [localize 'str_epoch_player_24' , "PLAIN DOWN"]
 };
 
 if (_finished) then {
@@ -58,7 +58,7 @@ if (_finished) then {
 		// Stop generator
 		_vehicle setVariable ["GeneratorRunning", false,true];
 
-		cutText [localize 'STR_EPOCH_PLAYER_118', "PLAIN DOWN"];
+		cutText [localize 'str_epoch_player_118', "PLAIN DOWN"];
 	
 };
 

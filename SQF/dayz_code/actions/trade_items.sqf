@@ -1,7 +1,7 @@
 private ["_part_out","_part_in","_qty_out","_qty_in","_qty","_buy_o_sell","_textPartIn","_textPartOut","_bos","_needed","_started","_finished","_animState","_isMedic","_total_parts_out","_abort","_removed","_tradeCounter","_next_highest_bar","_third_highest_bar","_next_highest_conv","_third_highest_conv","_third_parts_out_raw","_third_parts_out","_remainder","_next_parts_out_raw","_next_parts_out","_activatingPlayer","_traderID","_total_trades"];
 // [part_out,part_in, qty_out, qty_in,];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_8' , "PLAIN DOWN"] };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_8' , "PLAIN DOWN"] };
 TradeInprogress = true;
 
 _total_parts_out = 0;
@@ -35,7 +35,7 @@ _abort = false;
 
 if(_total_trades < 1) exitWith { 
 	_needed =  _qty_in - _qty;
-	cutText [format[(localize 'STR_EPOCH_PLAYER_133'),_needed,_textPartIn] , "PLAIN DOWN"];
+	cutText [format[(localize 'str_epoch_player_133'),_needed,_textPartIn] , "PLAIN DOWN"];
 	TradeInprogress = false;
 };
 
@@ -47,9 +47,9 @@ for "_x" from 1 to _total_trades do {
 
 	// cutText ["Starting trade, stand still to complete.", "PLAIN DOWN"];
 	if(_total_trades == 1) then { 
-		cutText [format[(localize 'STR_EPOCH_PLAYER_128'),_tradeCounter,_total_trades] , "PLAIN DOWN"];
+		cutText [format[(localize 'str_epoch_player_128'),_tradeCounter,_total_trades] , "PLAIN DOWN"];
 	} else {
-		cutText [format[(localize 'STR_EPOCH_PLAYER_138'),_tradeCounter,_total_trades] , "PLAIN DOWN"];
+		cutText [format[(localize 'str_epoch_player_138'),_tradeCounter,_total_trades] , "PLAIN DOWN"];
 	};
 	player playActionNow "Medic";
 	
@@ -87,7 +87,7 @@ for "_x" from 1 to _total_trades do {
 			[objNull, player, rSwitchMove,""] call RE;
 			player playActionNow "stop";
 		};
-		cutText [localize 'STR_EPOCH_PLAYER_24' , "PLAIN DOWN"];
+		cutText [localize 'str_epoch_player_24' , "PLAIN DOWN"];
 	};
 
 	if (_finished) then {
@@ -109,10 +109,10 @@ for "_x" from 1 to _total_trades do {
 					// total of all parts
 					_total_parts_out = _total_parts_out + _qty_out;
 
-					cutText [format[(localize 'STR_EPOCH_PLAYER_137'),_qty_in,_textPartIn,_qty_out,_textPartOut], "PLAIN DOWN"];
+					cutText [format[(localize 'str_epoch_player_137'),_qty_in,_textPartIn,_qty_out,_textPartOut], "PLAIN DOWN"];
 
 				} else {
-					cutText [format[(localize 'STR_EPOCH_PLAYER_132'),_textPartOut] , "PLAIN DOWN"];
+					cutText [format[(localize 'str_epoch_player_132'),_textPartOut] , "PLAIN DOWN"];
 					_abort = true;
 
 					// Return items taken
@@ -135,7 +135,7 @@ for "_x" from 1 to _total_trades do {
 
 		} else {
 			_needed =  _qty_in - _qty;
-			cutText [format[(localize 'STR_EPOCH_PLAYER_133'),_needed,_textPartIn] , "PLAIN DOWN"];
+			cutText [format[(localize 'str_epoch_player_133'),_needed,_textPartIn] , "PLAIN DOWN"];
 		};
 	};
 	

@@ -1,6 +1,6 @@
 private ["_hasbottleitem","_hastinitem","_bottletext","_tin1text","_tin2text","_tintext","_qty","_dis","_sfx","_removed"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_15' , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_15' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 player removeAction s_player_boil;

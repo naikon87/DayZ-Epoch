@@ -4,7 +4,7 @@
 */
 private ["_location","_dir","_classname","_missing","_text","_proceed","_num_removed","_object","_missingQty","_itemIn","_countIn","_qty","_removed","_removed_total","_tobe_removed_total","_objectID","_objectUID","_temp_removed_array","_textMissing","_requirements","_obj","_upgrade","_objectCharacterID"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_47' , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_47' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 player removeAction s_player_maint_build;
@@ -19,7 +19,7 @@ _objectID 	= _obj getVariable ["ObjectID","0"];
 // Find objectUID
 _objectUID	= _obj getVariable ["ObjectUID","0"];
 
-if(_objectID == "0" && _objectUID == "0") exitWith {TradeInprogress = false; s_player_maint_build = -1; cutText [localize 'STR_EPOCH_PLAYER_48', "PLAIN DOWN"];};
+if(_objectID == "0" && _objectUID == "0") exitWith {TradeInprogress = false; s_player_maint_build = -1; cutText [localize 'str_epoch_player_48', "PLAIN DOWN"];};
 
 // Get classname
 _classname = typeOf _obj;
@@ -98,19 +98,19 @@ if (_proceed) then {
 		dayzSwapObj = [_objectCharacterID,_object,[_dir,_location],_classname,_obj,_objectID,_objectUID];
 		publicVariableServer "dayzSwapObj";
 
-		cutText [format[localize 'STR_EPOCH_PLAYER_49',_text], "PLAIN DOWN", 5];
+		cutText [format[localize 'str_epoch_player_49',_text], "PLAIN DOWN", 5];
 
 		player reveal _object;
 		
 	} else {
 	
 		{player addMagazine _x;} forEach _temp_removed_array;
-		cutText [format[localize 'STR_EPOCH_PLAYER_50',_removed_total,_tobe_removed_total], "PLAIN DOWN"];
+		cutText [format[localize 'str_epoch_player_50',_removed_total,_tobe_removed_total], "PLAIN DOWN"];
 	
 	};
 } else {
 	_textMissing = getText(configFile >> "CfgMagazines" >> _missing >> "displayName");
-	cutText [format[localize 'STR_EPOCH_PLAYER_51',_missingQty, _textMissing], "PLAIN DOWN"];
+	cutText [format[localize 'str_epoch_player_51',_missingQty, _textMissing], "PLAIN DOWN"];
 };
 
 

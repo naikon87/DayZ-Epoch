@@ -5,19 +5,19 @@
 */
 private ["_itemOut","_position","_isOk","_counter","_rnd","_item","_itemtodrop","_vehicle","_inVehicle"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_70' , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_70' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 call gear_ui_init;
 
 // find position 5m in front of player
 _position = player modeltoworld [0,5,0];
-if(!(surfaceIsWater _position)) exitWith {TradeInprogress = false; cutText [localize 'STR_EPOCH_PLAYER_71' , "PLAIN DOWN"]; };
+if(!(surfaceIsWater _position)) exitWith {TradeInprogress = false; cutText [localize 'str_epoch_player_71' , "PLAIN DOWN"]; };
 
-if((currentWeapon player) != "MeleeFishingPole") exitWith {TradeInprogress = false; cutText [localize 'STR_EPOCH_PLAYER_72', "PLAIN DOWN"]; };
+if((currentWeapon player) != "MeleeFishingPole") exitWith {TradeInprogress = false; cutText [localize 'str_epoch_player_72', "PLAIN DOWN"]; };
 
 if(dayz_isSwimming) exitWith {TradeInprogress = false; cutText [localize "str_player_26", "PLAIN DOWN"]; };
-if(player getVariable["combattimeout", 0] >= time) exitWith {TradeInprogress = false; cutText [localize 'STR_EPOCH_PLAYER_24', "PLAIN DOWN"];};
+if(player getVariable["combattimeout", 0] >= time) exitWith {TradeInprogress = false; cutText [localize 'str_epoch_player_24', "PLAIN DOWN"];};
 
 _isOk = true;
 _counter = 0;
@@ -33,7 +33,7 @@ while {_isOk} do {
 
 	if (r_interrupt or (player getVariable["combattimeout", 0] >= time)) then {
 		_isOk = false;
-		cutText [localize 'STR_EPOCH_PLAYER_24', "PLAIN DOWN"];
+		cutText [localize 'str_epoch_player_24', "PLAIN DOWN"];
 	} else {
 		
 		sleep 2;
@@ -62,15 +62,15 @@ while {_isOk} do {
 				player addMagazine _itemOut;
 			};
 			
-			cutText [localize 'STR_EPOCH_PLAYER_73', "PLAIN DOWN"];
+			cutText [localize 'str_epoch_player_73', "PLAIN DOWN"];
 			_isOk = false;
 		} else {
-			cutText [localize 'STR_EPOCH_PLAYER_74', "PLAIN DOWN"];
+			cutText [localize 'str_epoch_player_74', "PLAIN DOWN"];
 			_counter = _counter + 1;
 			if(_counter == 5) then {
 				_isOk = false;
 				sleep 2;
-				cutText [localize 'STR_EPOCH_PLAYER_75', "PLAIN DOWN"];
+				cutText [localize 'str_epoch_player_75', "PLAIN DOWN"];
 			};
 		};
 	};

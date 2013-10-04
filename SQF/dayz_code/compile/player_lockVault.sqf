@@ -5,7 +5,7 @@
 */
 private ["_objectID","_objectUID","_obj","_ownerID","_dir","_pos","_holder","_weapons","_magazines","_backpacks","_alreadyPacking","_lockedClass","_text","_playerNear"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_2' , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_2' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 _obj = _this;
@@ -18,7 +18,7 @@ if(isNull _obj) exitWith { TradeInprogress = false; };
 
 // Test cannot lock while another player is nearby
 _playerNear = {isPlayer _x} count (player nearEntities ["CAManBase", 6]) > 1;
-if(_playerNear) exitWith { TradeInprogress = false; cutText [localize 'STR_EPOCH_PLAYER_3', "PLAIN DOWN"];  };
+if(_playerNear) exitWith { TradeInprogress = false; cutText [localize 'str_epoch_player_3', "PLAIN DOWN"];  };
 
 _ownerID = _obj getVariable["CharacterID","0"];
 _objectID 	= _obj getVariable["ObjectID","0"];
@@ -28,11 +28,11 @@ player playActionNow "Medic";
 player removeAction s_player_lockvault;
 s_player_lockvault = 1;
 
-if((_ownerID != dayz_combination) and (_ownerID != dayz_playerUID)) exitWith {TradeInprogress = false; s_player_lockvault = -1; cutText [format[localize 'STR_EPOCH_PLAYER_4',_text], "PLAIN DOWN"]; };
+if((_ownerID != dayz_combination) and (_ownerID != dayz_playerUID)) exitWith {TradeInprogress = false; s_player_lockvault = -1; cutText [format[localize 'str_epoch_player_4',_text], "PLAIN DOWN"]; };
 
 _alreadyPacking = _obj getVariable["packing",0];
 
-if (_alreadyPacking == 1) exitWith {TradeInprogress = false; s_player_lockvault = -1; cutText [format[localize 'STR_EPOCH_PLAYER_5',_text], "PLAIN DOWN"]};
+if (_alreadyPacking == 1) exitWith {TradeInprogress = false; s_player_lockvault = -1; cutText [format[localize 'str_epoch_player_5',_text], "PLAIN DOWN"]};
 
 _obj setVariable["packing",1];
 
@@ -77,7 +77,7 @@ if(!isNull _obj) then {
 		_holder setVariable ["BackpackCargo", _backpacks, true];
 	};
 	
-	cutText [format[localize 'STR_EPOCH_PLAYER_6',_text], "PLAIN DOWN"];
+	cutText [format[localize 'str_epoch_player_6',_text], "PLAIN DOWN"];
 
 	s_player_lockvault = -1;
 };

@@ -5,7 +5,7 @@
 */
 private ["_isOk","_i","_objName","_objInfo","_lenInfo","_started","_finished","_animState","_isMedic","_proceed","_counter","_itemOut","_countOut","_tree","_distance2d","_distance3d","_trees","_findNearestTree"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_76' , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_76' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 // allowed trees list move this later
@@ -109,9 +109,9 @@ if (count(_findNearestTree) >= 1) then {
 			};
 			//diag_log format["DEBUG TREE DAMAGE: %1", _tree];
 		
-			cutText [format[localize 'STR_EPOCH_PLAYER_77', _i,_itemOut], "PLAIN DOWN"];
+			cutText [format[localize 'str_epoch_player_77', _i,_itemOut], "PLAIN DOWN"];
 		} else {
-			cutText [format[localize 'STR_EPOCH_PLAYER_78', _i,_itemOut], "PLAIN DOWN"];
+			cutText [format[localize 'str_epoch_player_78', _i,_itemOut], "PLAIN DOWN"];
 		};
 	} else {
 		r_interrupt = false;
@@ -119,12 +119,12 @@ if (count(_findNearestTree) >= 1) then {
 			[objNull, player, rSwitchMove,""] call RE;
 			player playActionNow "stop";
 		};
-		cutText [localize 'STR_EPOCH_PLAYER_24', "PLAIN DOWN"];
+		cutText [localize 'str_epoch_player_24', "PLAIN DOWN"];
 	};
 
 	
 
 } else {
-	cutText [localize 'STR_EPOCH_PLAYER_79', "PLAIN DOWN"];
+	cutText [localize 'str_epoch_player_79', "PLAIN DOWN"];
 };
 TradeInprogress = false;

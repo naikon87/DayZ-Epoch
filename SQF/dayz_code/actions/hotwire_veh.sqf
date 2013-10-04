@@ -1,7 +1,7 @@
 private["_vehicle"];
 _vehicle = _this select 3;
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_28', "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_28', "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 {player removeAction _x} forEach s_player_lockunlock;s_player_lockunlock = [];
@@ -31,7 +31,7 @@ if (_removed == 1) then {
 			*/
 		};
 	} else {
-		cutText [localize 'STR_EPOCH_PLAYER_29', "PLAIN DOWN"];
+		cutText [localize 'str_epoch_player_29', "PLAIN DOWN"];
 	};
 };
 

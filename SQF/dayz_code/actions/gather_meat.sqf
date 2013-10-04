@@ -1,6 +1,6 @@
 private ["_item","_hasKnife","_hasKnifeBlunt","_hasHarvested","_qty","_text","_string","_type","_started","_finished","_animState","_isMedic","_array","_isListed","_config"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_26' , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_26' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 player removeAction s_player_butcher;
@@ -53,7 +53,7 @@ if ((_hasKnife or _hasKnifeBlunt) and !_hasHarvested) then {
 			[objNull, player, rSwitchMove,""] call RE;
 			player playActionNow "stop";
 		};
-		cutText [localize 'STR_EPOCH_PLAYER_24' , "PLAIN DOWN"];
+		cutText [localize 'str_epoch_player_24' , "PLAIN DOWN"];
 		//_abort = true;
 	};
 

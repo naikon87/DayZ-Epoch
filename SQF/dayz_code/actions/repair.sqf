@@ -1,6 +1,6 @@
 private ["_vehicle","_part","_hitpoint","_type","_selection","_array","_started","_finished","_animState","_isMedic","_num_removed","_damage","_dis","_sfx","_allFixed","_id","_hasToolbox","_section","_nameType","_namePart","_hitpoints"];
 
-if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_105' , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'str_epoch_player_105' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 _id = _this select 2;
@@ -79,7 +79,7 @@ if (_section and _hasToolbox) then {
 				_vehicle setvelocity [0,0,1];
 
 				//Success!
-				cutText [format[localize 'STR_EPOCH_PLAYER_106',_namePart,_nameType], "PLAIN DOWN"];
+				cutText [format[localize 'str_epoch_player_106',_namePart,_nameType], "PLAIN DOWN"];
 
 			};
 		
@@ -91,11 +91,11 @@ if (_section and _hasToolbox) then {
 			[objNull, player, rSwitchMove,""] call RE;
 			player playActionNow "stop";
 		};
-		cutText [localize 'STR_EPOCH_PLAYER_24', "PLAIN DOWN"];
+		cutText [localize 'str_epoch_player_24', "PLAIN DOWN"];
 	};
 			
 } else {
-	cutText [format[localize 'STR_EPOCH_PLAYER_107',_namePart], "PLAIN DOWN"];
+	cutText [format[localize 'str_epoch_player_107',_namePart], "PLAIN DOWN"];
 };
 
 {dayz_myCursorTarget removeAction _x} forEach s_player_repairActions;s_player_repairActions = [];
