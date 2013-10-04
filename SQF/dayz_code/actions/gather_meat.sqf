@@ -1,6 +1,6 @@
 private ["_item","_hasKnife","_hasKnifeBlunt","_hasHarvested","_qty","_text","_string","_type","_started","_finished","_animState","_isMedic","_array","_isListed","_config"];
 
-if(TradeInprogress) exitWith { cutText ["Gutting animal already in progress." , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_26' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 player removeAction s_player_butcher;
@@ -53,7 +53,7 @@ if ((_hasKnife or _hasKnifeBlunt) and !_hasHarvested) then {
 			[objNull, player, rSwitchMove,""] call RE;
 			player playActionNow "stop";
 		};
-		cutText ["Canceled gutting." , "PLAIN DOWN"];
+		cutText [localize 'STR_EPOCH_PLAYER_24' , "PLAIN DOWN"];
 		//_abort = true;
 	};
 
@@ -77,8 +77,7 @@ if ((_hasKnife or _hasKnifeBlunt) and !_hasHarvested) then {
 		dayzGutBody spawn local_gutObject;
 		publicVariable "dayzGutBody";
 		
-		_string = format[localize "str_success_gutted_animal",_text,_qty];
-		cutText [_string, "PLAIN DOWN"];
+		cutText [format[localize "str_success_gutted_animal",_text,_qty], "PLAIN DOWN"];
 	};
 };
 s_player_butcher = -1;

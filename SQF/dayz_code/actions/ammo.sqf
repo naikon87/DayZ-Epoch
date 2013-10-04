@@ -19,7 +19,7 @@ if (_ammo != "") then {
 	_vehicle addMagazineTurret [_ammo,_turret];
 	player removeMagazine _ammo;
 
-	cutText [format["You have successfully loaded %1 ammunition.",_ammoType], "PLAIN DOWN"];
+	cutText [format[localize 'STR_EPOCH_PLAYER_13',_ammoType], "PLAIN DOWN"];
 } else {
-	cutText [format["You need %1 type of ammo to do this.",_text], "PLAIN DOWN"];
+	cutText [format[localize 'STR_EPOCH_PLAYER_14',_text], "PLAIN DOWN"];
 };

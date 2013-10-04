@@ -4,7 +4,7 @@ parameters: _obj
 */
 private ["_obj","_objectID","_objectUID","_started","_finished","_animState","_isMedic","_isOk","_proceed","_counter","_limit","_objType","_sfx","_dis","_itemOut","_countOut","_selectedRemoveOutput","_friendlies","_nearestPole","_ownerID","_refundpart","_isWreck","_findNearestPoles","_findNearestPole","_IsNearPlot","_brokenTool","_removeTool","_isDestructable","_isRemovable","_objOwnerID","_isOwnerOfObj","_preventRefund"];
 
-if(TradeInprogress) exitWith { cutText ["Remove already in progress." , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_96' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 player removeAction s_player_deleteBuild;
@@ -15,7 +15,7 @@ _obj = _this select 3;
 _objOwnerID = _obj getVariable["CharacterID","0"];
 _isOwnerOfObj = (_objOwnerID == dayz_characterID);
 
-if(_obj getVariable ["GeneratorRunning", false]) exitWith {TradeInprogress = false; cutText ["Cannot remove running generator.", "PLAIN DOWN"];};
+if(_obj getVariable ["GeneratorRunning", false]) exitWith {TradeInprogress = false; cutText [localize 'STR_EPOCH_PLAYER_97', "PLAIN DOWN"];};
 
 _objectID 	= _obj getVariable ["ObjectID","0"];
 _objectUID	= _obj getVariable ["ObjectUID","0"];
@@ -59,7 +59,7 @@ if(_IsNearPlot >= 1) then {
 	};
 };
 
-cutText [format["Starting de-construction of %1.",_objType], "PLAIN DOWN"];
+cutText [format[localize 'STR_EPOCH_PLAYER_98',_objType], "PLAIN DOWN"];
 
 // Alert zombies once.
 [player,50,true,(getPosATL player)] spawn player_alertZombies;
@@ -125,7 +125,7 @@ while {_isOk} do {
 		_proceed = false;
 	};
 
-	cutText [format["De-constructing %1 stage %2 of %3 walk away at anytime to cancel.",_objType, _counter,_limit], "PLAIN DOWN"];
+	cutText [format[localize 'STR_EPOCH_PLAYER_99',_objType, _counter,_limit], "PLAIN DOWN"];
 
 	if(_counter == _limit) exitWith {
 		_isOk = false;
@@ -141,7 +141,7 @@ if(_brokenTool) then {
 		_removeTool = ["ItemCrowbar","ItemToolbox"] call BIS_fnc_selectRandom;
 	};
 	if(([player,_removeTool,1] call BIS_fnc_invRemove) > 0) then {
-		cutText [format["Tool (%1) broke cannot remove %2.",_removeTool,_objType], "PLAIN DOWN"];
+		cutText [format[localize 'STR_EPOCH_PLAYER_100',_removeTool,_objType], "PLAIN DOWN"];
 	};
 };
 
@@ -158,7 +158,7 @@ if (_proceed) then {
 			publicVariableServer "dayzDeleteObj";
 		};
 
-		cutText [format["De-constructing %1.",_objType], "PLAIN DOWN"];
+		cutText [format[localize 'STR_EPOCH_PLAYER_101',_objType], "PLAIN DOWN"];
 		
 		_preventRefund = false;
 
@@ -178,7 +178,7 @@ if (_proceed) then {
 		};
 		
 		if((count _selectedRemoveOutput) <= 0) then {
-			cutText ["No parts found.", "PLAIN DOWN"];
+			cutText [localize 'STR_EPOCH_PLAYER_102', "PLAIN DOWN"];
 		};
 
 		// give refund items
@@ -192,10 +192,10 @@ if (_proceed) then {
 				};
 				
 			} forEach _selectedRemoveOutput;
-			cutText ["De-constructed parts are now in your inventory.", "PLAIN DOWN"];
+			cutText [localize 'STR_EPOCH_PLAYER_103', "PLAIN DOWN"];
 		};
 	} else {
-		cutText ["Failed object not longer exists.", "PLAIN DOWN"];
+		cutText [localize 'STR_EPOCH_PLAYER_104', "PLAIN DOWN"];
 	};
 
 } else {

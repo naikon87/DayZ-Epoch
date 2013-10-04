@@ -1,6 +1,6 @@
 private ["_vehicle","_curFuel","_newFuel","_started","_finished","_animState","_isMedic","_abort","_canSize","_configVeh","_capacity","_nameText","_isOk","_findNearestVehicles","_findNearestVehicle","_IsNearVehicle"];
 
-if(TradeInprogress) exitWith { cutText ["Refuel already in progress." , "PLAIN DOWN"] };
+if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_19' , "PLAIN DOWN"] };
 TradeInprogress = true;
 
 _isVehicle = false;
@@ -45,7 +45,7 @@ if(_IsNearVehicle >= 1) then {
 		// qty to add per loop
 		_canSize = (_capacity / 10);
 	
-		cutText [format["Filling up %1, move to cancel.",_nameText], "PLAIN DOWN"];
+		cutText [format[localize 'STR_EPOCH_PLAYER_20',_nameText], "PLAIN DOWN"];
 			
 		// alert zombies
 		[player,20,true,(getPosATL player)] spawn player_alertZombies;
@@ -125,7 +125,7 @@ if(_IsNearVehicle >= 1) then {
 				// Play sound
 				[player,"refuel",0,false] call dayz_zombieSpeak;
 
-				cutText [format["%1 filled to %2 percent capacity.",_nameText,round(_newFuel*100)], "PLAIN DOWN"];
+				cutText [format[localize 'STR_EPOCH_PLAYER_21',_nameText,round(_newFuel*100)], "PLAIN DOWN"];
 			};
 		};
 
@@ -134,6 +134,6 @@ if(_IsNearVehicle >= 1) then {
 	};
 
 } else {
-	cutText ["No Vehicles Nearby.", "PLAIN DOWN"];
+	cutText [localize 'STR_EPOCH_PLAYER_22', "PLAIN DOWN"];
 };
 TradeInprogress = false;

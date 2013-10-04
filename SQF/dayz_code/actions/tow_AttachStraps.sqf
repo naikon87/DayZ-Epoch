@@ -1,6 +1,6 @@
 private ["_vehicle","_started","_finished","_animState","_isMedic","_abort","_configVeh","_nameText","_findNearestVehicles","_findNearestVehicle","_IsNearVehicle","_towTruck","_vehicleFits","_worldPos","_veh","_box","_p1","_p2","_maxX","_maxY","_location1","_location2","_location3","_location4","_towTruckSize","_allowedSize"];
 
-if(TradeInprogress) exitWith { cutText ["Already in progress." , "PLAIN DOWN"] };
+if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_9' , "PLAIN DOWN"] };
 TradeInprogress = true;
 
 player removeAction s_player_towing;
@@ -82,14 +82,14 @@ if(_IsNearVehicle >= 1) then {
 					_vehicle attachTo [_towTruck,[1.3,-2,2.3]];
 					_towTruck setVariable ["DZEinTow", true, true];
 					_towTruck setVariable ["DZEvehicleInTow", _vehicle, true];
-					cutText [format["%1 has been attached to Tow Truck.",_nameText], "PLAIN DOWN"];
+					cutText [format[localize 'STR_EPOCH_PLAYER_121',_nameText], "PLAIN DOWN"];
 				};	
 			} else {
-				cutText [format["Failed to attach %1 to Tow Truck.",_nameText], "PLAIN DOWN"];
+				cutText [format[localize 'STR_EPOCH_PLAYER_122',_nameText], "PLAIN DOWN"];
 			};
 
 		} else {
-			cutText [format["%1 too large and cannot be towed.",_nameText], "PLAIN DOWN"];
+			cutText [format[localize 'STR_EPOCH_PLAYER_123',_nameText], "PLAIN DOWN"];
 		};
 
 	};
@@ -97,7 +97,7 @@ if(_IsNearVehicle >= 1) then {
 
 
 } else {
-	cutText ["No Vehicles Nearby.", "PLAIN DOWN"];
+	cutText [localize 'STR_EPOCH_PLAYER_22', "PLAIN DOWN"];
 };
 TradeInprogress = false;
 s_player_towing = -1;

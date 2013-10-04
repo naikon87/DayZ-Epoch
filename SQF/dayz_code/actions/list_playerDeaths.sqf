@@ -17,6 +17,6 @@ if((count dayzPlayerDeathsResult) > 0) then {
 	// load death message board ui
 	call EpochDeathBoardLoad;
 } else {
-	cutText ["No recent Deaths.", "PLAIN DOWN"];
+	cutText [localize 'STR_EPOCH_PLAYER_33', "PLAIN DOWN"];
 	dayzPlayerDeathsResult = nil;
 };

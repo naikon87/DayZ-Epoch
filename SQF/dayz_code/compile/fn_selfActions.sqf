@@ -12,7 +12,7 @@ _vehicle = vehicle player;
 _isPZombie = player isKindOf "PZombie_VB";
 _inVehicle = (_vehicle != player);
 
-_onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
+_onLadder = (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 _canDo = (!r_drag_sqf and !r_player_unconscious and !_onLadder);
 
 _nearLight = 	nearestObject [player,"LitObject"];

@@ -1,6 +1,6 @@
 private ["_item","_config","_onLadder","_create","_isOk","_config2","_magType","_meleeNum","_muzzles","_wtype","_type","_hastoolweapon","_text"];
 
-if(TradeInprogress) exitWith { cutText ["Add to toolbelt already in progress." , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_36' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 _item = 	_this;

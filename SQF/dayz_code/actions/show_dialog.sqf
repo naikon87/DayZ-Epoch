@@ -1,8 +1,6 @@
 private ["_trader_data", "_dialog"];
 
-if (TradeInprogress) exitWith {
-	cutText ["Trading already in progress." , "PLAIN DOWN"];
-};
+if (TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_112' , "PLAIN DOWN"]; };
 
 _trader_data = (_this select 3);
 
@@ -11,7 +9,7 @@ lbClear TraderDialogCatList;
 lbClear TraderDialogItemList;
 
 TraderCurrentCatIndex = -1;
-TraderItemList = -1;
+TraderItemList = [];
 
 TraderCatList = [];
 {

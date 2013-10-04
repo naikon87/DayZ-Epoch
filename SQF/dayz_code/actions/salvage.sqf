@@ -1,6 +1,6 @@
 private ["_vehicle","_part","_hitpoint","_type","_selection","_array","_started","_finished","_animState","_isMedic","_isOK","_brokenPart","_findPercent","_damage","_hasToolbox","_nameType","_namePart"];
 
-if(TradeInprogress) exitWith { cutText ["Salvage already in progress." , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_108' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 //_id = _this select 2;
@@ -89,10 +89,10 @@ if (_hasToolbox) then {
 
 				if(_brokenPart) then {
 					//Failed!
-					cutText [format["You have destroyed %1 while attempting to remove from %2",_namePart,_nameType], "PLAIN DOWN"];
+					cutText [format[localize 'STR_EPOCH_PLAYER_109',_namePart,_nameType], "PLAIN DOWN"];
 				} else {
 					//Success!
-					cutText [format["You have successfully removed %1 from the %2",_namePart,_nameType], "PLAIN DOWN"];
+					cutText [format[localize 'STR_EPOCH_PLAYER_110',_namePart,_nameType], "PLAIN DOWN"];
 				};
 
 			} else {
@@ -107,11 +107,11 @@ if (_hasToolbox) then {
 			[objNull, player, rSwitchMove,""] call RE;
 			player playActionNow "stop";
 		};
-		cutText ["Canceled Salvage.", "PLAIN DOWN"];
+		cutText [localize 'STR_EPOCH_PLAYER_24', "PLAIN DOWN"];
 	};
 			
 } else {
-	cutText [format["You need %1 to remove this part.",_namePart], "PLAIN DOWN"];
+	cutText [format[localize 'STR_EPOCH_PLAYER_111',_namePart], "PLAIN DOWN"];
 };
 
 dayz_myCursorTarget = objNull;

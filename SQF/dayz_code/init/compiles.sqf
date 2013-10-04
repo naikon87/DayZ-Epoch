@@ -494,11 +494,11 @@ if (!isDedicated) then {
 
 	TraderCurrentCatIndex = -1;
 	TraderCatList = -1;
-	TraderItemList = -1;
+	TraderItemList = [];
 
 	TraderDialogLoadItemList = {
 		private ["_index", "_trader_id", "_activatingPlayer"];
-		TraderItemList = -1;
+		TraderItemList = [];
 		_index = _this select 0;
 
 		if (_index < 0 or TraderCurrentCatIndex == _index) exitWith {};
@@ -651,24 +651,24 @@ if (!isDedicated) then {
 		private ["_index", "_item", "_data"];
 		_index = _this select 0;
 		if (_index < 0) exitWith {
-			cutText ["Trading canceled." , "PLAIN DOWN"];
+			cutText [localize 'STR_EPOCH_PLAYER_12' , "PLAIN DOWN"];
 		};
 		_item = TraderItemList select _index;
 		_data = [_item select 0, _item select 3, 1, _item select 2, "buy", _item select 4, _item select 1, _item select 8];
 		[0, player, '', _data] execVM (_item select 9);
-		TraderItemList = -1;
+		TraderItemList = [];
 	};
 
 	TraderDialogSell = {
 		private ["_index", "_item", "_data"];
 		_index = _this select 0;
 		if (_index < 0) exitWith {
-			cutText ["Trading canceled." , "PLAIN DOWN"];
+			cutText [localize 'STR_EPOCH_PLAYER_12' , "PLAIN DOWN"];
 		};
 		_item = TraderItemList select _index;
 		_data = [_item select 6, _item select 0, _item select 5, 1, "sell", _item select 1, _item select 7, _item select 8];
 		[0, player, '', _data] execVM (_item select 9);
-		TraderItemList = -1;
+		TraderItemList = [];
 	};
 
 	// murder message boards by maca134

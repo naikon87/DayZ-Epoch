@@ -4,11 +4,11 @@
 */
 private ["_location","_dir","_classname","_item","_hasrequireditem","_missing","_hastoolweapon","_cancel","_reason","_started","_finished","_animState","_isMedic","_dis","_sfx","_hasbuilditem","_tmpbuilt","_onLadder","_isWater","_require","_text","_offset","_IsNearPlot","_isOk","_location1","_location2","_counter","_limit","_proceed","_num_removed","_position","_object","_canBuildOnPlot","_friendlies","_nearestPole","_ownerID","_findNearestPoles","_findNearestPole","_distance","_classnametmp","_ghost","_isPole","_needText","_lockable","_zheightchanged","_rotate","_combination_1","_combination_2","_combination_3","_combination_4","_combination","_combination_1_Display","_combinationDisplay","_zheightdirection","_tick"];
 
-if(TradeInprogress) exitWith { cutText ["\n\nBuilding already in progress." , "PLAIN DOWN"]; };
+if(TradeInprogress) exitWith { cutText [localize 'STR_EPOCH_PLAYER_37' , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
 // disallow building if too many objects are found within 30m
-if((count ((position player) nearObjects ["All",30])) >= DZE_BuildingLimit) exitWith {TradeInprogress = false; cutText ["\n\nCannot build, too many objects witin 30m.", "PLAIN DOWN"];};
+if((count ((position player) nearObjects ["All",30])) >= DZE_BuildingLimit) exitWith {TradeInprogress = false; cutText [localize 'STR_EPOCH_PLAYER_38', "PLAIN DOWN"];};
 
 _onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 _isWater = 		dayz_isSwimming;
@@ -36,7 +36,7 @@ closeDialog 1;
 
 if(_isWater) exitWith {TradeInprogress = false; cutText [localize "str_player_26", "PLAIN DOWN"];};
 if(_onLadder) exitWith {TradeInprogress = false; cutText [localize "str_player_21", "PLAIN DOWN"];};
-if(player getVariable["combattimeout", 0] >= time) exitWith {TradeInprogress = false; cutText ["Cannot build while in combat.", "PLAIN DOWN"];};
+if(player getVariable["combattimeout", 0] >= time) exitWith {TradeInprogress = false; cutText [localize 'STR_EPOCH_PLAYER_39', "PLAIN DOWN"];};
 
 _item =			_this;
 _classname = 	getText (configFile >> "CfgMagazines" >> _item >> "ItemActions" >> "Build" >> "create");
@@ -78,7 +78,7 @@ _findNearestPole = [];
 _IsNearPlot = count (_findNearestPole);
 
 // If item is plot pole and another one exists within 45m
-if(_isPole and _IsNearPlot > 0) exitWith {  TradeInprogress = false; cutText ["Cannot build plot pole within 45m of an existing plot." , "PLAIN DOWN"]; };
+if(_isPole and _IsNearPlot > 0) exitWith {  TradeInprogress = false; cutText [localize 'STR_EPOCH_PLAYER_40' , "PLAIN DOWN"]; };
 
 if(_IsNearPlot == 0) then {
 	_canBuildOnPlot = true;
@@ -105,7 +105,7 @@ if(_IsNearPlot == 0) then {
 };
 
 // _message
-if(!_canBuildOnPlot) exitWith {  TradeInprogress = false; cutText [format["Unable to build %1 nearby.",_needText,_distance] , "PLAIN DOWN"]; };
+if(!_canBuildOnPlot) exitWith {  TradeInprogress = false; cutText [format[localize 'STR_EPOCH_PLAYER_41',_needText,_distance] , "PLAIN DOWN"]; };
 
 _missing = "";
 _hasrequireditem = true;
@@ -117,7 +117,7 @@ _hasrequireditem = true;
 _hasbuilditem = _this in magazines player;
 if (!_hasbuilditem) exitWith {TradeInprogress = false; cutText [format[(localize "str_player_31"),_text,"build"] , "PLAIN DOWN"]; };
 
-if (!_hasrequireditem) exitWith {TradeInprogress = false; cutText [format["Missing tool %1",_missing] , "PLAIN DOWN"]; };
+if (!_hasrequireditem) exitWith {TradeInprogress = false; cutText [format[localize 'STR_EPOCH_PLAYER_42',_missing] , "PLAIN DOWN"]; };
 if (_hasrequireditem) then {
 
 	_location = [0,0,0];
@@ -141,7 +141,7 @@ if (_hasrequireditem) then {
 	
 	_position = getPosATL _object;
 
-	cutText ["Planning construction: PgUp = raise, PgDn = lower, Q or E = flip 180, and Space-Bar to build.", "PLAIN DOWN"];
+	cutText [localize 'STR_EPOCH_PLAYER_43', "PLAIN DOWN"];
 
 	while {_isOk} do {
 		
@@ -283,7 +283,7 @@ if (_hasrequireditem) then {
 		if (player getVariable["combattimeout", 0] >= time) exitWith {
 			_isOk = false;
 			_cancel = true;
-			_reason = "Cannot build while in combat.";
+			_reason = localize 'STR_EPOCH_PLAYER_39';
 			detach _object;
 			deleteVehicle _object;
 		};
@@ -321,7 +321,7 @@ if (_hasrequireditem) then {
 		_tmpbuilt setPosATL _location;
 
 		
-		cutText [format["Placing %1, move to cancel.",_text], "PLAIN DOWN"];
+		cutText [format[localize 'STR_EPOCH_PLAYER_44',_text], "PLAIN DOWN"];
 		
 		_limit = 3;
 
@@ -378,7 +378,7 @@ if (_hasrequireditem) then {
 				_counter = _counter + 1;
 			};
 
-			cutText [format["Constructing %1 stage %2 of %3, move to cancel.",_text, _counter,_limit], "PLAIN DOWN"];
+			cutText [format[localize 'STR_EPOCH_PLAYER_45',_text, _counter,_limit], "PLAIN DOWN"];
 
 			if(_counter == _limit) exitWith {
 				_isOk = false;
@@ -462,7 +462,7 @@ if (_hasrequireditem) then {
 
 			} else {
 				deleteVehicle _tmpbuilt;
-				cutText ["Canceled building." , "PLAIN DOWN"];
+				cutText [localize 'STR_EPOCH_PLAYER_24' , "PLAIN DOWN"];
 			};
 
 		} else {
@@ -474,12 +474,12 @@ if (_hasrequireditem) then {
 
 			deleteVehicle _tmpbuilt;
 
-			cutText ["Canceled building." , "PLAIN DOWN"];
+			cutText [localize 'STR_EPOCH_PLAYER_24' , "PLAIN DOWN"];
 		};
 
 	} else {
 		deleteVehicle _tmpbuilt;
-		cutText [format["Canceled construction of %1 %2.",_text,_reason], "PLAIN DOWN"];
+		cutText [format[localize 'STR_EPOCH_PLAYER_46',_text,_reason], "PLAIN DOWN"];
 	};
 };
 
