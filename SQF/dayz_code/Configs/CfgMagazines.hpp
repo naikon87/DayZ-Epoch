@@ -4,7 +4,7 @@ class CfgMagazines {
 	// Ammmo
 	class 100Rnd_762x54_PK : CA_Magazine { 
 		scope = 2; 
-		displayName = "PKM Mag."; 
+		displayName = $STR_EPOCH_EQUIP_1; 
 		picture = "\CA\weapons\data\equip\m_pk_ca.paa"; 
 		ammo = "B_762x54_Ball"; 
 		count = 100; 
@@ -20,7 +20,7 @@ class CfgMagazines {
 
 	class 29Rnd_30mm_AGS30 : CA_Magazine { 
 		scope = 2; 
-		displayName = "HE Rounds"; 
+		displayName = $STR_EPOCH_EQUIP_2; 
 		picture = "\CA\weapons\data\equip\m_m240_ca.paa"; 
 		ammo = "G_30mm_HE"; 
 		count = 29; 
@@ -33,7 +33,7 @@ class CfgMagazines {
 
 	class 50Rnd_127x107_DSHKM : CA_Magazine { 
 		scope = 2; 
-		displayName = "DShKM"; 
+		displayName = $STR_EPOCH_EQUIP_3; 
 		picture = "\CA\weapons\data\equip\m_m240_ca.paa"; 
 		model = "\z\addons\dayz_epoch\models\dshkm_mag.p3d";
 		ammo = "B_127x107_Ball"; 
@@ -48,7 +48,7 @@ class CfgMagazines {
 	};
 	class 100Rnd_127x99_M2 : CA_Magazine { 
 		scope = 2; 
-		displayName = "M2 Machine Gun"; 
+		displayName = $STR_EPOCH_EQUIP_4; 
 		picture = "\CA\weapons\data\equip\m_m240_ca.paa"; 
 		ammo = "B_127x99_Ball"; 
 		count = 100; 
@@ -63,7 +63,7 @@ class CfgMagazines {
 	class 2000Rnd_762x51_M134 : CA_Magazine { 
 		count = 2000; 
 		scope = 2; 
-		displayName = "M134 7.62 Nato"; 
+		displayName = $STR_EPOCH_EQUIP_5; 
 		picture = "\CA\weapons\data\equip\m_m240_ca.paa"; 
 		model = "\z\addons\dayz_epoch\models\m136_mag.p3d";
 		ammo = "B_762x51_3RndBurst"; 
@@ -75,7 +75,7 @@ class CfgMagazines {
 	};
 	class 48Rnd_40mm_MK19 : CA_Magazine { 
 		scope = 2; 
-		displayName = "Mk. 19 40mm"; 
+		displayName = $STR_EPOCH_EQUIP_6; 
 		picture = "\CA\weapons\data\equip\m_m240_ca.paa"; 
 		ammo = "G_40mm_HE"; 
 		count = 48; 
@@ -88,7 +88,7 @@ class CfgMagazines {
 
 	class 100Rnd_762x51_M240 : CA_Magazine { 
 		scope = 2; 
-		displayName = "100Rnd. M240"; 
+		displayName = $STR_EPOCH_EQUIP_7; 
 		picture = "\CA\weapons\data\equip\m_m240_ca.paa"; 
 		count = 100; 
 		type = "256";
@@ -106,7 +106,7 @@ class CfgMagazines {
 
 	class 200Rnd_556x45_M249 : CA_Magazine { 
 		scope = 2; 
-		displayName = "200Rnd. M249 Belt"; 
+		displayName = $STR_EPOCH_EQUIP_8; 
 		picture = "\CA\weapons\data\equip\m_m249_ca.paa"; 
 		ammo = "B_556x45_Ball"; 
 		count = 200; 
@@ -122,7 +122,7 @@ class CfgMagazines {
 	};
 
 	class 100Rnd_556x45_M249 : 200Rnd_556x45_M249 { 
-		displayName = "M249 Mag."; 
+		displayName = $STR_EPOCH_EQUIP_9; 
 		descriptionShort = "Caliber: 5.56x45mm NATO<br/>Rounds: 100<br/>Used in: M249"; 
 		count = 100; 
 		picture = "\CA\weapons_E\Data\icons\m_m245_CA.paa";  
@@ -135,7 +135,7 @@ class CfgMagazines {
 		scope = 2;
 		count = 1;
 		type = 256;
-		displayName = "Hotwire kit";
+		displayName = $STR_EPOCH_EQUIP_10;
 		model = "\z\addons\dayz_epoch\models\hotwire.p3d";
 		picture = "\z\addons\dayz_epoch\pictures\equip_hotwire_ca.paa";
 		descriptionShort = "Used to temporarily unlock and start a vehicle has a chance of failure and is consumed on use.";
@@ -147,7 +147,7 @@ class CfgMagazines {
 		scope = 2;
 		count = 1;
 		type = 256;
-		displayName = "Canvas";
+		displayName = $STR_EPOCH_EQUIP_11;
 		model = "\z\addons\dayz_epoch\models\canvas.p3d";
 		picture = "\z\addons\dayz_epoch\pictures\equip_canvas_ca.paa";
 		descriptionShort = "Canvas Parcel";
@@ -205,7 +205,7 @@ class CfgMagazines {
 		scope = 2;
 		count = 1;
 		type = 256;
-		displayName = "Burlap";
+		displayName = $STR_EPOCH_EQUIP_12;
 		model = "\z\addons\dayz_epoch\models\burlap.p3d";
 		picture = "\z\addons\dayz_epoch\pictures\equip_burlap_ca.paa";
 		descriptionShort = "Burlap: A strong cloth like material used for building sandbags";
@@ -227,7 +227,7 @@ class CfgMagazines {
 		scope = 2;
 		count = 1;
 		type = 256;
-		displayName = "Light Bulb";
+		displayName = $STR_EPOCH_EQUIP_13;
 		model = "\z\addons\dayz_epoch\models\bulb.p3d";
 		picture = "\z\addons\dayz_epoch\pictures\equip_bulb_CA.paa";
 		descriptionShort = "Lightbulb: Used in part to create a buildable lamp post. Don't tell me you didn't find this in a barn.";
@@ -248,14 +248,14 @@ class CfgMagazines {
 		scope = 2;
 		count = 1;
 		type = 256;
-		displayName = "Briefcase";
+		displayName = $STR_EPOCH_EQUIP_14;
 		model = "\z\addons\dayz_epoch\models\briefcase.p3d";
 		picture = "\z\addons\dayz_epoch\pictures\equip_briefcase_CA.paa";
 	};
 	class ItemBriefcaseEmpty: ItemBriefcase_Base
 	{
 		picture = "\z\addons\dayz_epoch\pictures\equip_briefcase_E_CA.paa";
-		descriptionShort = "Empty Briefcase";
+		descriptionShort = $STR_EPOCH_EQUIP_15;
 		weight = 1;
 		class ItemActions
 		{

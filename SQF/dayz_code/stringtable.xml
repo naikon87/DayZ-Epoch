@@ -2527,7 +2527,7 @@
 		<Key ID="STR_EPOCH_PLAYER_1">						
 			<Original>Cannot access gear in a locked vehicle</Original>						
 			<English>Cannot access gear in a locked vehicle</English>						
-			<German>TODO</German>
+			<German>Kann nicht auf Gang in einem verschlossenen Fahrzeug</German>
 			<Russian>TODO</Russian>
 			<Spanish>TODO</Spanish>
 			<Dutch>TODO</Dutch>
@@ -2537,7 +2537,7 @@
 		<Key ID="STR_EPOCH_PLAYER_2">						
 			<Original>Lock already in Progress</Original>						
 			<English>Lock already in Progress</English>						
-			<German>TODO</German>
+			<German>Sperren bereits im Gange</German>
 			<Russian>TODO</Russian>
 			<Spanish>TODO</Spanish>
 			<Dutch>TODO</Dutch>
@@ -2545,9 +2545,9 @@
 			<Czech>TODO</Czech>
 		</Key>
 		<Key ID="STR_EPOCH_PLAYER_3">						
-			<Original>Cannot lock while another player is nearby.</Original>		
-			<English>Cannot lock while another player is nearby.</English>		
-			<German>TODO</German>
+			<Original>Cannot lock while another player is nearby</Original>		
+			<English>Cannot lock while another player is nearby</English>		
+			<German>Kann nicht gesperrt werden, während ein anderer Spieler in der Nähe ist</German>
 			<Russian>TODO</Russian>
 			<Spanish>TODO</Spanish>
 			<Dutch>TODO</Dutch>
@@ -2555,9 +2555,9 @@
 			<Czech>TODO</Czech>
 		</Key>
 		<Key ID="STR_EPOCH_PLAYER_4">						
-			<Original>You cannot lock this %1, you do not know the combination.</Original>		
-			<English>You cannot lock this %1, you do not know the combination.</English>		
-			<German>TODO</German>
+			<Original>You cannot lock this %1, you do not know the combination</Original>		
+			<English>You cannot lock this %1, you do not know the combination</English>		
+			<German>Sie können nicht gesperrt werden dieses %1, du weißt nicht, die Kombination</German>
 			<Russian>TODO</Russian>
 			<Spanish>TODO</Spanish>
 			<Dutch>TODO</Dutch>
@@ -2565,9 +2565,9 @@
 			<Czech>TODO</Czech>
 		</Key>
 		<Key ID="STR_EPOCH_PLAYER_5">						
-			<Original>That %1 is already being locked.</Original>		
-			<English>That %1 is already being locked.</English>		
-			<German>TODO</German>
+			<Original>That %1 is already being locked</Original>		
+			<English>That %1 is already being locked</English>		
+			<German>Das %1 ist bereits gesperrt</German>
 			<Russian>TODO</Russian>
 			<Spanish>TODO</Spanish>
 			<Dutch>TODO</Dutch>
@@ -2577,7 +2577,7 @@
 		<Key ID="STR_EPOCH_PLAYER_6">						
 			<Original>Your %1 has been locked</Original>		
 			<English>Your %1 has been locked</English>		
-			<German>TODO</German>
+			<German>Ihre %1 wurde gesperrt</German>
 			<Russian>TODO</Russian>
 			<Spanish>TODO</Spanish>
 			<Dutch>TODO</Dutch>
@@ -2597,7 +2597,7 @@
 		<Key ID="STR_EPOCH_PLAYER_8">						
 			<Original>Trade already in progress...</Original>		
 			<English>Trade already in progress...</English>		
-			<German>TODO</German>
+			<German>Handel bereits im Gange...</German>
 			<Russian>TODO</Russian>
 			<Spanish>TODO</Spanish>
 			<Dutch>TODO</Dutch>
@@ -2607,7 +2607,7 @@
 		<Key ID="STR_EPOCH_PLAYER_9">						
 			<Original>Already in progress...</Original>		
 			<English>Already in progress...</English>		
-			<German>TODO</German>
+			<German>Bereits im Gange...</German>
 			<Russian>TODO</Russian>
 			<Spanish>TODO</Spanish>
 			<Dutch>TODO</Dutch>
@@ -2627,7 +2627,7 @@
 		<Key ID="STR_EPOCH_PLAYER_11">						
 			<Original>Tent not setup yet...</Original>		
 			<English>Tent not setup yet...</English>		
-			<German>TODO</German>
+			<German>Packen Zelt bereits im Gange...</German>
 			<Russian>TODO</Russian>
 			<Spanish>TODO</Spanish>
 			<Dutch>TODO</Dutch>
@@ -2637,7 +2637,7 @@
 		<Key ID="STR_EPOCH_PLAYER_12">						
 			<Original>Trading canceled...</Original>		
 			<English>Trading canceled...</English>		
-			<German>TODO</German>
+			<German>Handel abgesagt...</German>
 			<Russian>TODO</Russian>
 			<Spanish>TODO</Spanish>
 			<Dutch>TODO</Dutch>
@@ -2647,7 +2647,7 @@
 		<Key ID="STR_EPOCH_PLAYER_13">						
 			<Original>You have successfully loaded %1 ammunition.</Original>		
 			<English>You have successfully loaded %1 ammunition.</English>		
-			<German>TODO</German>
+			<German>Sie haben erfolgreich geladen %1 Munition</German>
 			<Russian>TODO</Russian>
 			<Spanish>TODO</Spanish>
 			<Dutch>TODO</Dutch>
@@ -2657,7 +2657,7 @@
 		<Key ID="STR_EPOCH_PLAYER_14">						
 			<Original>You need %1 type of ammo to do this.</Original>		
 			<English>You need %1 type of ammo to do this.</English>		
-			<German>TODO</German>
+			<German>Sie müssen %1 Art der Munition, dies zu tun</German>
 			<Russian>TODO</Russian>
 			<Spanish>TODO</Spanish>
 			<Dutch>TODO</Dutch>
@@ -2667,7 +2667,7 @@
 		<Key ID="STR_EPOCH_PLAYER_15">						
 			<Original>Boil already in progress.</Original>		
 			<English>Boil already in progress.</English>		
-			<German>TODO</German>
+			<German>Kochen Sie bereits im Gange.</German>
 			<Russian>TODO</Russian>
 			<Spanish>TODO</Spanish>
 			<Dutch>TODO</Dutch>
@@ -4117,6 +4117,506 @@
 		<Key ID="STR_EPOCH_PLAYER_160">						
 			<Original>Combination incorrect, %1 is still locked.</Original>		
 			<English>Combination incorrect, %1 is still locked.</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_PLAYER_161">						
+			<Original>Pulse is extremely weak</Original>		
+			<English>Pulse is extremely weak</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_PLAYER_162">						
+			<Original>Pulse is weak</Original>		
+			<English>Pulse is weak</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_PLAYER_163">						
+			<Original>Pulse is strong</Original>		
+			<English>Pulse is strong</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_PLAYER_164">						
+			<Original>Magazine %1 / %2 - Weapons %3 / %4 - Backpacks %5 / %6</Original>		
+			<English>Magazine %1 / %2 - Weapons %3 / %4 - Backpacks %5 / %6</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_PLAYER_165">						
+			<Original>You have tagged a player as friendly. Waiting for other player to accept.</Original>		
+			<English>You have tagged a player as friendly. Waiting for other player to accept.</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_PLAYER_166">						
+			<Original>A player wants to tag you as friendly. To accept, tag player as friendly.</Original>		
+			<English>A player wants to tag you as friendly. To accept, tag player as friendly.</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_PLAYER_167">						
+			<Original>%1 wants to tag you as friendly. To accept, tag player as friendly.</Original>		
+			<English>%1 wants to tag you as friendly. To accept, tag player as friendly.</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_DOOR_1">						
+			<Original>Open Door</Original>		
+			<English>Open Door</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_DOOR_2">						
+			<Original>Close Door</Original>		
+			<English>Close Door</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_DOOR_3">						
+			<Original>Lock Door</Original>		
+			<English>Lock Door</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_DOOR_4">						
+			<Original>Unlock Door</Original>		
+			<English>Unlock Door</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_DOOR_5">						
+			<Original>Wood Door Base</Original>		
+			<English>Wood Door Base</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_DOOR_6">						
+			<Original>Block Garage Door Base</Original>		
+			<English>Block Garage Door Base</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_DOOR_7">						
+			<Original>Large Wood Door</Original>		
+			<English>Large Wood Door</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_DOOR_8">						
+			<Original>Large Wood Door Locked</Original>		
+			<English>Large Wood Door Locked</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_DOOR_9">						
+			<Original>Garage Wood Door</Original>		
+			<English>Garage Wood Door</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_DOOR_10">						
+			<Original>Garage Wood Door Locked</Original>		
+			<English>Garage Wood Door Locked</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_DOOR_11">						
+			<Original>Block Garage Door Locked</Original>		
+			<English>Block Garage Door Locked</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_DOOR_12">						
+			<Original>Block Garage Door</Original>		
+			<English>Block Garage Door</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_DOOR_13">						
+			<Original>Block Door Locked</Original>		
+			<English>Block Door Locked</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_DOOR_14">						
+			<Original>Block Door</Original>		
+			<English>Block Door</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_BUILD_1">						
+			<Original>Wood Wall ruins</Original>		
+			<English>Wood Wall ruins</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_BUILD_2">						
+			<Original>Wood Wall 1/3 ruins</Original>		
+			<English>Wood Wall 1/3 ruins</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_BUILD_3">						
+			<Original>Wood Floor 1/2 ruins</Original>		
+			<English>Wood Floor 1/2 ruins</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_BUILD_4">						
+			<Original>Wood Floor ruins</Original>		
+			<English>Wood Floor ruins</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_BUILD_5">						
+			<Original>Wood Floor 1/4 ruins</Original>		
+			<English>Wood Floor 1/4 ruins</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_BUILD_6">						
+			<Original>Wood Floor 1/4 ruins</Original>		
+			<English>Wood Floor 1/4 ruins</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_BUILD_7">						
+			<Original>Metal Floor ruins</Original>		
+			<English>Metal Floor ruins</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_BUILD_8">						
+			<Original>Wood Door</Original>		
+			<English>Wood Door</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_BUILD_9">						
+			<Original>Wood Door Locked</Original>		
+			<English>Wood Door Locked</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_1">						
+			<Original>PKM Mag</Original>		
+			<English>PKM Mag</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_2">						
+			<Original>HE Rounds</Original>		
+			<English>HE Rounds</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_3">						
+			<Original>DShKM</Original>		
+			<English>DShKM</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_4">						
+			<Original>M2 Machine Gun</Original>		
+			<English>M2 Machine Gun</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_5">						
+			<Original>M134 7.62 Nato</Original>		
+			<English>M134 7.62 Nato</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_6">						
+			<Original>Mk. 19 40mm</Original>		
+			<English>Mk. 19 40mm</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_7">						
+			<Original>100Rnd. M240</Original>		
+			<English>100Rnd. M240</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_8">						
+			<Original>200Rnd. M249 Belt</Original>		
+			<English>200Rnd. M249 Belt</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_9">						
+			<Original>M249 Mag</Original>		
+			<English>M249 Mag</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_10">						
+			<Original>Hotwire kit</Original>		
+			<English>Hotwire kit</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_11">						
+			<Original>Canvas</Original>		
+			<English>Canvas</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_12">						
+			<Original>Burlap</Original>		
+			<English>Burlap</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_13">						
+			<Original>Light Bulb</Original>		
+			<English>Light Bulb</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_14">						
+			<Original>Briefcase</Original>		
+			<English>Briefcase</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_15">						
+			<Original>Empty Briefcase</Original>		
+			<English>Empty Briefcase</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_16">						
+			<Original>Black Key</Original>		
+			<English>Black Key</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_17">						
+			<Original>Green Key</Original>		
+			<English>Green Key</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_18">						
+			<Original>Blue Key</Original>		
+			<English>Blue Key</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_19">						
+			<Original>Yellow Key</Original>		
+			<English>Yellow Key</English>
+			<German>TODO</German>
+			<Russian>TODO</Russian>
+			<Spanish>TODO</Spanish>
+			<Dutch>TODO</Dutch>
+			<French>TODO</French>
+			<Czech>TODO</Czech>
+		</Key>
+		<Key ID="STR_EPOCH_EQUIP_20">						
+			<Original>Red Key</Original>		
+			<English>Red Key</English>
 			<German>TODO</German>
 			<Russian>TODO</Russian>
 			<Spanish>TODO</Spanish>

@@ -5,12 +5,12 @@ _isCardiac = _unit getVariable["USEC_isCardiac",false];
 
 sleep 1;
 if (_isDead) then {
-	TitleText["Pulse is extremely weak","PLAIN DOWN",3];
+	TitleText[localize 'str_epoch_player_161',"PLAIN DOWN",3];
 } else {
 	if (_isCardiac) then {
-		TitleText["Pulse is weak","PLAIN DOWN",3];
+		TitleText[localize 'str_epoch_player_162',"PLAIN DOWN",3];
 	} else {
-		TitleText["Pulse is strong","PLAIN DOWN",3];
+		TitleText[localize 'str_epoch_player_163',"PLAIN DOWN",3];
 	};
 };
 

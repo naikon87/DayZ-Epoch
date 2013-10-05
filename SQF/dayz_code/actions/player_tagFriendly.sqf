@@ -16,7 +16,8 @@ _rfriendlies = _target getVariable ["friendlies", []];
 
 if (!(_callerID in _rfriendlies)) then {
 	// caller
-	titleText [format["You have tagged a player as friendly. Waiting for other player to accept.",(name _target)], "PLAIN DOWN"];
+	titleText [format[localize 'str_epoch_player_165',(name _target)], "PLAIN DOWN"];
 	// target
-	[_caller,_target,"loc",rTITLETEXT,format["A player wants to tag you as friendly. To accept, tag player as friendly.", (name _caller)],"PLAIN DOWN"] call RE;
+	DZEPV_FriendRQ = [player];
+	(owner _target) publicVariableClient "DZEPV_FriendRQ";
 };

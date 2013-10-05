@@ -70,4 +70,5 @@ if (!isDedicated) then {
 	"changeCharacter"	addPublicVariableEventHandler {(_this select 1) call player_serverModelChange};
 	"dayzSwitch"		addPublicVariableEventHandler {(_this select 1) call server_switchPlayer};
 	"dayzFire"			addPublicVariableEventHandler {nul=(_this select 1) spawn BIS_Effects_Burn};
+	"DZEPV_FriendRQ"    addPublicVariableEventHandler {cutText [format[localize 'str_epoch_player_167',(name ((_this select 1) select 0))],"PLAIN DOWN"];};
 };

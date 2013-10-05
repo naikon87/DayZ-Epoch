@@ -2607,7 +2607,7 @@ class CfgVehicles {
 			class CloseDoor
 			{
 				position = "";
-				displayName = "Close Door";
+				displayName = $STR_EPOCH_DOOR_2;
 				radius = 1.5;
 				onlyForPlayer = 0;
 				condition = "this animationPhase 'DoorR' == 1";
@@ -2616,7 +2616,7 @@ class CfgVehicles {
 			class OpenDoor
 			{
 				position = "";
-				displayName = "Open Door";
+				displayName = $STR_EPOCH_DOOR_1;
 				radius = 1.5;
 				onlyForPlayer = 0;
 				condition = "this animationPhase 'DoorR' == 0";
