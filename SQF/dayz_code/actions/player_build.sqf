@@ -122,7 +122,6 @@ if (_hasrequireditem) then {
 
 	_location = [0,0,0];
 	
-	_counter = 0;
 	_isOk = true;
 
 	// get inital players position
@@ -143,6 +142,8 @@ if (_hasrequireditem) then {
 
 	cutText [localize 'str_epoch_player_43', "PLAIN DOWN"];
 
+	_objHeightChange = 0;
+	
 	while {_isOk} do {
 		
 		_zheightchanged = false;
@@ -215,24 +216,30 @@ if (_hasrequireditem) then {
 			// _ztick = (round((_position select 2)*100)/100);
 
 			if(_zheightdirection == "up") then {
-				_position = [(_position select 0),(_position select 1), ((_position select 2)+0.1)];
+				_position set [2,((_position select 2)+0.1)];
+				_objHeightChange = _objHeightChange + 0.1;
 			};
 			if(_zheightdirection == "down") then {
-				_position = [(_position select 0),(_position select 1), ((_position select 2)-0.1)];
+				_position set [2,((_position select 2)-0.1)];
+				_objHeightChange = _objHeightChange - 0.1;
 			};
 
 			if(_zheightdirection == "up_alt") then {
-				_position = [(_position select 0),(_position select 1), ((_position select 2)+1)];
+				_position set [2,((_position select 2)+1)];
+				_objHeightChange = _objHeightChange + 1;
 			};
 			if(_zheightdirection == "down_alt") then {
-				_position = [(_position select 0),(_position select 1), ((_position select 2)-1)];
+				_position set [2,((_position select 2)-1)];
+				_objHeightChange = _objHeightChange - 1;
 			};
 
 			if(_zheightdirection == "up_ctrl") then {
-				_position = [(_position select 0),(_position select 1), ((_position select 2)+0.01)];
+				_position set [2,((_position select 2)+0.01)];
+				_objHeightChange = _objHeightChange + 0.01;
 			};
 			if(_zheightdirection == "down_ctrl") then {
-				_position = [(_position select 0),(_position select 1), ((_position select 2)-0.01)];
+				_position set [2,((_position select 2)-0.01)];
+				_objHeightChange = _objHeightChange - 0.01;
 			};
 			
 			_object setDir (getDir _object);
@@ -245,8 +252,6 @@ if (_hasrequireditem) then {
 			
 		};
 
-		
-		
 		sleep 1;
 
 		_location2 = getPosATL player;
@@ -268,17 +273,13 @@ if (_hasrequireditem) then {
 			deleteVehicle _object;
 		};
 		
-		if(_counter >= 500) exitWith {
+		if((_objHeightChange > 5))) exitWith {
 			_isOk = false;
 			_cancel = true;
-			_reason = "Ran out of time to find position."; 
+			_reason = "You can't modify the height of this object more than 5 meters"; 
 			detach _object;
 			deleteVehicle _object;
 		};
-
-		cutText [format["%1",(500-_counter)], "PLAIN DOWN"];
-
-		_counter = _counter + _tick;
 
 		if (player getVariable["combattimeout", 0] >= time) exitWith {
 			_isOk = false;
